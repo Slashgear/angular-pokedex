@@ -23,8 +23,4 @@ export class PokemonListComponent implements OnInit {
   ngOnInit() {
 
   }
-
-  isVisible(pokemon: Pokemon) {
-    return pokemon.name.toLowerCase().includes(this.matchingValue.toLowerCase());
-  }
 }

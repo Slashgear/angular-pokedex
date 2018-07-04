@@ -6,6 +6,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { PokemonItemComponent } from './pokemon-item/pokemon-item.component';
 import {FormsModule} from '@angular/forms';
+import { FilterPokemonPipe } from './filter-pokemon.pipe';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import {FormsModule} from '@angular/forms';
     NavbarComponent,
     PokemonListComponent,
     PokemonItemComponent,
+    FilterPokemonPipe,
   ],
   imports: [
     BrowserModule,
