@@ -2,7 +2,7 @@
   <app-navbar></app-navbar>
 
   <main class="container">
-    <input type="text" class="search" placeholder="🔍" autofocus (keyup)="search($event)">
+    <input type="text" class="search" placeholder="🔍" autofocus [(ngModel)]="searchedValue">
     {{ searchedValue }}
     <app-pokemon-list></app-pokemon-list>
   </main>

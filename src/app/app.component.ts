@@ -7,8 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   searchedValue: String = '';
-
-  search($event) {
-    this.searchedValue = $event.target.value;
-  }
 }
