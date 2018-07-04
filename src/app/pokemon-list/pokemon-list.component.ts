@@ -7,7 +7,14 @@ import {Pokemon} from '../pokemon';
   styleUrls: ['./pokemon-list.component.css']
 })
 export class PokemonListComponent implements OnInit {
-  pokemon = new Pokemon(1, 'Bulbizar');
+  pokemons: Pokemon[] = [
+    new Pokemon(1, 'Bulbizar'),
+    new Pokemon(2, 'Herbizarre'),
+    new Pokemon(3, 'Florizarre'),
+    new Pokemon(4, 'Salamèche'),
+    new Pokemon(5, 'Reptincel'),
+    new Pokemon(6, 'Dracaufeu'),
+  ];
   constructor() { }
 
   ngOnInit() {

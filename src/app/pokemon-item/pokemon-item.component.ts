@@ -8,7 +8,7 @@ import {Pokemon} from '../pokemon';
 })
 export class PokemonItemComponent implements OnInit {
   @Input()
-  private pokemon: Pokemon;
+  pokemon: Pokemon;
 
   constructor() { }
 
