@@ -1,5 +1,7 @@
 <ul class="pokemon-list">
-  <li *ngFor="let pokemon of pokemons">
-    <app-pokemon-item [pokemon]="pokemon"></app-pokemon-item>
-  </li>
+  <ng-container *ngFor="let pokemon of pokemons">
+    <li *ngIf="isVisible(pokemon)">
+      <app-pokemon-item [pokemon]="pokemon"></app-pokemon-item>
+    </li>
+  </ng-container>
 </ul>

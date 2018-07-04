@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Pokemon} from '../pokemon';
 
 @Component({
@@ -7,6 +7,9 @@ import {Pokemon} from '../pokemon';
   styleUrls: ['./pokemon-list.component.css']
 })
 export class PokemonListComponent implements OnInit {
+  @Input()
+  matchingValue: String = '';
+
   pokemons: Pokemon[] = [
     new Pokemon(1, 'Bulbizar'),
     new Pokemon(2, 'Herbizarre'),
@@ -18,6 +21,10 @@ export class PokemonListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
+  isVisible(pokemon: Pokemon) {
+    return pokemon.name.toLowerCase().includes(this.matchingValue.toLowerCase());
+  }
 }
