@@ -7,6 +7,7 @@ import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { PokemonItemComponent } from './pokemon-item/pokemon-item.component';
 import {FormsModule} from '@angular/forms';
 import { FilterPokemonPipe } from './filter-pokemon.pipe';
+import { HeartActionComponent } from './heart-action/heart-action.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { FilterPokemonPipe } from './filter-pokemon.pipe';
     PokemonListComponent,
     PokemonItemComponent,
     FilterPokemonPipe,
+    HeartActionComponent,
   ],
   imports: [
     BrowserModule,

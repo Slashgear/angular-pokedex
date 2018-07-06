@@ -1,0 +1,23 @@
+button.heart-action {
+  padding: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.heart-action svg {
+  margin-left: auto;
+  display: block;
+  height: 16px;
+}
+
+.heart-action path {
+  fill: gray;
+  height: 10px;
+  width: 10px;
+}
+
+.heart-action.heart-action--active path {
+  fill: #FF0000;
+}

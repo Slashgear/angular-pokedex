@@ -18,25 +18,11 @@
 
 .pokemon__actions {
   padding: 10px 20px;
-  margin-left: auto;
 }
 
 .pokemon__actions .action {
-  height: 24px;
-}
-
-.heart-action {
-  margin-left: auto;
   display: block;
-  height: 16px;
+  text-align: right;
 }
 
-.heart-action path {
-  fill: gray;
-  height: 10px;
-  width: 10px;
-}
 
-.heart-action.heart-action--active path {
-  fill: #FF0000;
-}
