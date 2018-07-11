@@ -1,22 +1,36 @@
 import { Injectable } from '@angular/core';
 import {Pokemon} from './pokemon';
 import {Observable, of} from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import {map} from 'rxjs/internal/operators';
+
+interface PokemonSpecies {
+  name: string;
+}
+interface PokedexEntry {
+  entry_number: number;
+  pokemon_species: PokemonSpecies;
+}
+
+interface Pokedex {
+  pokemon_entries: PokedexEntry[];
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class PokemonService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
    fetchPokemon(): Observable<Pokemon[]> {
-      return of([
-        new Pokemon(1, 'Bulbizar'),
-        new Pokemon(2, 'Herbizarre'),
-        new Pokemon(3, 'Florizarre'),
-        new Pokemon(4, 'Salamèche'),
-        new Pokemon(5, 'Reptincel'),
-        new Pokemon(6, 'Dracaufeu'),
-      ]);
+      return this.http
+        .get<Pokedex>('https://pokeapi.co/api/v2/pokedex/1/')
+        .pipe(
+          map(pokedex =>
+            pokedex.pokemon_entries
+              .slice(0, 151)
+              .map((pokedexEntry: PokedexEntry) => new Pokemon(pokedexEntry.entry_number, pokedexEntry.pokemon_species.name)))
+        );
   }
 }

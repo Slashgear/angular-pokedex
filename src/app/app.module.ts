@@ -8,6 +8,7 @@ import { PokemonItemComponent } from './pokemon-item/pokemon-item.component';
 import {FormsModule} from '@angular/forms';
 import { FilterPokemonPipe } from './filter-pokemon.pipe';
 import { HeartActionComponent } from './heart-action/heart-action.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HeartActionComponent } from './heart-action/heart-action.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
