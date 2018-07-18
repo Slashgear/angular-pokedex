@@ -11,6 +11,7 @@ import { HeartActionComponent } from './heart-action/heart-action.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';
+import { PokemonPageComponent } from './pokemon-page/pokemon-page.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HomePageComponent } from './home-page/home-page.component';
     FilterPokemonPipe,
     HeartActionComponent,
     HomePageComponent,
+    PokemonPageComponent,
   ],
   imports: [
     BrowserModule,
