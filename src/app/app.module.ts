@@ -9,6 +9,8 @@ import {FormsModule} from '@angular/forms';
 import { FilterPokemonPipe } from './filter-pokemon.pipe';
 import { HeartActionComponent } from './heart-action/heart-action.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { HttpClientModule } from '@angular/common/http';
     PokemonItemComponent,
     FilterPokemonPipe,
     HeartActionComponent,
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
