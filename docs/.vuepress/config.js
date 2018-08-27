@@ -1,4 +1,5 @@
 module.exports = {
+  base: '/angular-pokedex/',
   title: 'Angular Pokedex Workshop',
   description: 'Simple iterative workshop with Angular on a Pokedex App',
   themeConfig: {
